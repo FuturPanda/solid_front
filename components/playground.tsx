@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description: "The OpenAI Playground built using the components.",
 };
 
-export default function PlaygroundPage() {
+export default function PlaygroundPage({ ydoc }) {
   return (
     <>
       <div className=" h-full w-full flex-col md:flex">
@@ -29,7 +29,7 @@ export default function PlaygroundPage() {
         </div>
         <Separator />
         <div className="flex h-full flex-col space-y-4">
-          <Tiptap />
+          <Tiptap ydoc={ydoc} />
           {/* <Textarea
             placeholder="Write a tagline for an ice cream shop"
             className="min-h-[400px] flex-1 p-4 md:min-h-[700px] lg:min-h-[700px]"
